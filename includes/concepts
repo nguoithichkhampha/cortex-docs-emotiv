@@ -21,7 +21,7 @@
 
 <div class="fullwidth">
 
-  <p>The Cortex service listens on port 54321. Depending on the WebSocket client you’re using, this means you can connect to it using the url <code>wss://cortex.emotiv.com:54321</code>.</p>
+  <p>The Cortex service listens on port 54321. Depending on the WebSocket client you’re using, this means you can connect to it using the url <code>wss://emotivcortex.com:54321</code>.</p>
 
 </div>
 
