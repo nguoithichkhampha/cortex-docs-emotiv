@@ -1,0 +1,43 @@
+<h1 id="workflow">Workflow</h1>
+
+<h2 id="how-to-authorize-with-an-emotiv-id">How to <code>authorize</code> with an emotiv id:</h2>
+
+<div class="fullwidth">
+
+  <h3 id="step-1">Step 1:</h3>
+
+  <p>Cortex only allow <code>authorize</code> when have a logged in user. To check have any user logged in and that user is object which you want to work.</p>
+
+  <p>You can <a href="#getuserlogin">get user login</a></p>
+
+  <blockquote>
+    <p>Request</p>
+  </blockquote>
+
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"getUserLogin"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+  <blockquote>
+    <p>Response</p>
+  </blockquote>
+
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"cortextest"</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+  <p>If return value is not user which you want. Go to step 2, otherwise ignore it.</p>
+
+  <h3 id="step-2">Step 2:</h3>
+
+  <p>Call method <a href="#logout">log out</a> user <code>cortextest</code> and call <a href="#login">log in</a> user account which you want.</p>
+
+  <h3 id="step-3">Step 3:</h3>
+
+  <p>Call method <a href="#authorize">authorize</a></p>
+
+</div>
