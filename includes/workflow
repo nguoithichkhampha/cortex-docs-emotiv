@@ -46,8 +46,6 @@
 
 <div class="fullwidth">
 
-  <p>The workflow of training Mental Command and Facial Expression are same.</p>
-
   <h3 id="step-1-1">Step 1:</h3>
 
   <p>You need to make sure your headset connected with Cortex by the way call <a href="#queryheadsets">query headset</a></p>
@@ -101,6 +99,10 @@
 <div class="fullwidth">
 
   <h2 id="how-to-training-with-cortex">How to training with Cortex</h2>
+
+  <p>The workflow of training Mental Command and Facial Expression are same.</p>
+
+  <p>In this case, we try to set up training Mental Command</p>
 
   <h3 id="step-1-2">Step 1:</h3>
 
