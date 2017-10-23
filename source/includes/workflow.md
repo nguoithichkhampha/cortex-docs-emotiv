@@ -44,9 +44,7 @@ Call method [authorize](#authorize)
 
 ## How to get data from Cortex
 
-<div class="fullwidth">
-
-The workflow of training Mental Command and Facial Expression are same.   
+<div class="fullwidth">   
 
 ### Step 1:
 
@@ -101,6 +99,10 @@ Call method [create session](#createsession) with that headset.
 <div class="fullwidth">
 
 ## How to training with Cortex
+
+The workflow of training Mental Command and Facial Expression are same.
+
+In this case, we try to set up training Mental Command
 
 ### Step 1:
 
