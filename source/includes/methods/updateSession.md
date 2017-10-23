@@ -38,7 +38,7 @@ Value   | Description
 </div>
 
 
-### Example: Start a session
+### Example: Start a record
 
 > Request
 

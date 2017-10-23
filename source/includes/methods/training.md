@@ -37,7 +37,7 @@ events    | array of strings | list event can receive from [system event](#sys-e
 }
 ```
 
-```javascript
+<!-- ```javascript
   ws.send({
     "jsonrpc": "2.0",
     "method": "getDetectionInfo",
@@ -46,7 +46,7 @@ events    | array of strings | list event can receive from [system event](#sys-e
     }
     "id": 1
   });
-```
+``` -->
 
 > Response
 
@@ -142,7 +142,7 @@ Parameter | Type   | Description
 }
 ```
 
-```javascript
+<!-- ```javascript
   ws.send({
     "jsonrpc": "2.0",
     "method": "training",
@@ -155,7 +155,7 @@ Parameter | Type   | Description
     },
     "id": 1
   });
-```
+``` -->
 
 > Response
 

@@ -2,7 +2,7 @@
 title: Cortex API Documentation
 subtitle: Cortex API
 
-language_tabs: # must be one of https://git.io/vQNgJ
+<!-- language_tabs: # must be one of https://git.io/vQNgJ
   - json--raw: Raw
   - shell: Shell
   - javascript: Javascript
@@ -11,7 +11,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - java: Java
   - c: C/C++
   - csharp: C#/Unity
-  - swift: Swift
+  - swift: Swift -->
 
 <!-- toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -47,7 +47,7 @@ If you prefer to start with fully-worked examples, you can also find pre-built s
 
 <div class="fullwidth">
 
-To install Cortex, get it from the [Cortex download page](https://lmgtfy.com?q=cortex+download+page).
+To install Cortex, get it from the [Cortex download page](https://www.emotiv.com/developer/).
 
 Installer include Cortex UI application and Cortex Service. Cortex Service will automatic start after you finish install.
 
@@ -55,7 +55,7 @@ To check Cortex Service is running you try to open Cortex UI. If you can enter t
 
 </div>
 
-## Using the example code
+<!-- ## Using the example code
 
 <blockquote class="lang-specific json--raw">
   <p>
@@ -155,11 +155,11 @@ To check Cortex Service is running you try to open Cortex UI. If you can enter t
   <p>
     Examples are currently set to: <b>Swift</b>
   </p>
-</blockquote>
+</blockquote> -->
 
 
 
-```python
+<!-- ```python
   # Python example
   import lol
   if True:
@@ -184,10 +184,10 @@ To check Cortex Service is running you try to open Cortex UI. If you can enter t
 
 ```swift
   // Swift example
-```
+``` -->
 
 
-The examples in this documentation are available in a variety of different languages, you can click the tabs on the bottom-right to pick one.
+<!-- The examples in this documentation are available in a variety of different languages, you can click the tabs on the bottom-right to pick one.
 
-In some cases we expect that you're using particular JSON and WebSocket libraries. Instructions on how to install and use them for your chosen language are on the right.
+In some cases we expect that you're using particular JSON and WebSocket libraries. Instructions on how to install and use them for your chosen language are on the right. -->
 

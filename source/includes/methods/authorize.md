@@ -35,7 +35,7 @@ client_secret | string | Yes      | Client Secret
   }
 ```
 
-```javascript
+<!-- ```javascript
   ws.send({
     "jsonrpc": "2.0",
     "method": "login",
@@ -47,7 +47,7 @@ client_secret | string | Yes      | Client Secret
     },
     "id": 1
   });
-```
+``` -->
 
 > Response
 
@@ -79,13 +79,13 @@ Return all user logged in to Cortex.
   }
 ```
 
-```javascript
+<!-- ```javascript
   ws.send({
     "jsonrpc": "2.0",
     "method": "getUserLogin",
     "id": 1
   });
-```
+``` -->
 
 > Response
 
@@ -128,7 +128,7 @@ username      | string | Yes      | Emotiv ID
   }
 ```
 
-```javascript
+<!-- ```javascript
   ws.send({
     "jsonrpc": "2.0",
     "method": "logout",
@@ -137,7 +137,7 @@ username      | string | Yes      | Emotiv ID
     },
     "id": 1
   });
-```
+``` -->
 
 > Response
 
@@ -192,14 +192,14 @@ _auth     | string ([Auth Token](#auth-token))  | Token for use in subsequent ca
   }
 ```
 
-```javascript
+<!-- ```javascript
   ws.send({
     "jsonrpc": "2.0",
     "method": "authorize",
     "params": {},
     "id": 1
   });
-```
+``` -->
 
 > Response
 
@@ -235,7 +235,7 @@ If you don't set a specific license, Cortex will use oldest license which is act
   }
 ```
 
-```javascript
+<!-- ```javascript
   ws.send({
     "jsonrpc": "2.0",
     "method": "authorize",
@@ -247,7 +247,7 @@ If you don't set a specific license, Cortex will use oldest license which is act
     },
     "id": 1
   });
-```
+``` -->
 
 > Response
 
@@ -278,7 +278,7 @@ This is an authorize with a client id and secret, which you get when you sign up
   }
 ```
 
-```javascript
+<!-- ```javascript
   ws.send({
     "jsonrpc": "2.0",
     "method": "generateNewToken",
@@ -287,7 +287,7 @@ This is an authorize with a client id and secret, which you get when you sign up
     },
     "id": 1
   });
-```
+``` -->
 
 > Response
 

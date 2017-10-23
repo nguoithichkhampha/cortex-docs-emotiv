@@ -59,7 +59,7 @@ Parameter | Type   | Description
 }
 ```
 
-```javascript
+<!-- ```javascript
   ws.send({
     "jsonrpc": "2.0",
     "method": "controlBluetoothHeadset",
@@ -69,7 +69,7 @@ Parameter | Type   | Description
     },
     "id": 1
   });
-```
+``` -->
 
 > Response
 
