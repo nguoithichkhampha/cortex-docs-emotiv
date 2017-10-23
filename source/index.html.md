@@ -39,7 +39,7 @@ Cortex is a new and versatile API for interacting with Emotiv products, includin
 
 This documentation is split into multiple sections. This introductory section describes how to get set up with Cortex. [Concepts](#concepts) provides an overview of the API and how to use it. The [Methods](#methods) and [Data types](#data-types) sections provide a detailed reference with examples for each part of the API.
 
-If you prefer to start with fully-worked examples, you can also find pre-built starter projects for various languages in our [Cortex starter projects repository](https://sgentle.github.io/cortex-starters/).
+If you prefer to start with fully-worked examples, you can also find pre-built starter projects for various languages in our [Cortex example repository](https://github.com/Emotiv/cortex-example).
 
 </div>
 
