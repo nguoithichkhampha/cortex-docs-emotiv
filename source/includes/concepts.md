@@ -21,7 +21,7 @@ If you're not familiar with WebSockets or JSON, it may be helpful to read [An In
 
 <div class="fullwidth">
 
-The Cortex service listens on port 54321. Depending on the WebSocket client you're using, this means you can connect to it using the url `wss://cortex.emotiv.com:54321`.
+The Cortex service listens on port 54321. Depending on the WebSocket client you're using, this means you can connect to it using the url `wss://emotivcortex.com:54321`.
 
 </div>
 
