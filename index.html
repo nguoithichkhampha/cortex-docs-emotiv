@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;json--raw&quot;,&quot;shell&quot;,&quot;javascript&quot;,&quot;python&quot;,&quot;matlab&quot;,&quot;java&quot;,&quot;c&quot;,&quot;csharp&quot;,&quot;swift&quot;]">
+  <body class="index" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,17 +211,6 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
       <div class="subtitle">Cortex API</div>
-        <div class="lang-selector">
-              <a href="#" data-language-name="json--raw">Raw</a>
-              <a href="#" data-language-name="shell">Shell</a>
-              <a href="#" data-language-name="javascript">Javascript</a>
-              <a href="#" data-language-name="python">Python</a>
-              <a href="#" data-language-name="matlab">Matlab</a>
-              <a href="#" data-language-name="java">Java</a>
-              <a href="#" data-language-name="c">C/C++</a>
-              <a href="#" data-language-name="csharp">C#/Unity</a>
-              <a href="#" data-language-name="swift">Swift</a>
-        </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -235,9 +224,6 @@
                   </li>
                   <li>
                     <a href="#installing-cortex" class="toc-h2 toc-link" data-title="Introduction">Installing Cortex</a>
-                  </li>
-                  <li>
-                    <a href="#using-the-example-code" class="toc-h2 toc-link" data-title="Introduction">Using the example code</a>
                   </li>
               </ul>
           </li>
@@ -398,7 +384,7 @@
 
 <div class="fullwidth">
 
-  <p>To install Cortex, get it from the <a href="https://lmgtfy.com?q=cortex+download+page">Cortex download page</a>.</p>
+  <p>To install Cortex, get it from the <a href="https://www.emotiv.com/developer/">Cortex download page</a>.</p>
 
   <p>Installer include Cortex UI application and Cortex Service. Cortex Service will automatic start after you finish install.</p>
 
@@ -406,17 +392,17 @@
 
 </div>
 
-<h2 id="using-the-example-code">Using the example code</h2>
+<!-- ## Using the example code
 
 <blockquote class="lang-specific json--raw">
   <p>
     Examples are currently set to: <b>Raw</b>
   </p>
   <p>
-    Raw means the examples won’t be specific to any particular programming language. You’ll just see the JSON data being used to communicate with Cortex.
+    Raw means the examples won't be specific to any particular programming language. You'll just see the JSON data being used to communicate with Cortex.
   </p>
   <p>
-    If you want to try these examples out, it may be easiest to use a browser extension like <a href="https://chrome.google.com/webstore/detail/smart-websocket-client/omalebghpgejjiaoknljcfmglgbpocdp">Smart Websocket Client</a> for Chrome or <a href="https://addons.mozilla.org/en-US/firefox/addon/simple-websocket-client/">Simple Websocket Client</a> for Firefox and connect to the address <code>wss://emotivcortex.com:54321</code>.
+    If you want to try these examples out, it may be easiest to use a browser extension like [Smart Websocket Client](https://chrome.google.com/webstore/detail/smart-websocket-client/omalebghpgejjiaoknljcfmglgbpocdp) for Chrome or [Simple Websocket Client](https://addons.mozilla.org/en-US/firefox/addon/simple-websocket-client/) for Firefox and connect to the address `wss://emotivcortex.com:54321`.
   </p>
 </blockquote>
 
@@ -425,7 +411,7 @@
     Examples are currently set to: <b>Shell</b>
   </p>
   <p>
-    To access Cortex from the shell, we use the <code>wscat2</code> command-line tool. To use it, install <a href="https://nodejs.org">NodeJS</a> if you don’t already have it.
+    To access Cortex from the shell, we use the <code>wscat2</code> command-line tool. To use it, install <a href='https://nodejs.org'>NodeJS</a> if you don't already have it.
   </p>
   <p>
     Then run: <code>npm install -g wscat2</code>
@@ -437,36 +423,41 @@
     Examples are currently set to: <b>Javascript</b>
   </p>
   <p>
-    If you’re using the browser, no setup is necessary – we’ll use the browser’s inbuilt WebSocket support.
+    If you're using the browser, no setup is necessary – we'll use the browser's inbuilt WebSocket support.
   </p>
 </blockquote>
 
-<pre class="highlight javascript tab-javascript"><code>  <span class="kd">var</span> <span class="nx">ws</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WebSocket</span><span class="p">(</span><span class="s2">"wss://emotivcortex.com:54321"</span><span class="p">);</span>
+```javascript
+  var ws = new WebSocket("wss://emotivcortex.com:54321");
 
-  <span class="nx">ws</span><span class="p">.</span><span class="nx">onopen</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Websocket connected'</span><span class="p">);</span> <span class="p">};</span>
-  <span class="nx">ws</span><span class="p">.</span><span class="nx">onclose</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Websocket disconnected'</span><span class="p">);</span> <span class="p">};</span>
+  ws.onopen = function() { console.log('Websocket connected'); };
+  ws.onclose = function() { console.log('Websocket disconnected'); };
 
-  <span class="nx">ws</span><span class="p">.</span><span class="nx">onmessage</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'&gt;'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
-  <span class="p">};</span>
-</code></pre>
+  ws.onmessage = function(data) {
+    console.log('>', data);
+  };
+```
+
 <blockquote class="lang-specific javascript">
   <p>
     In NodeJS, we use the <code>ws</code> library. To install it, run: <code>npm install --save ws</code>.
   </p>
 </blockquote>
 
-<pre class="highlight javascript tab-javascript"><code>  <span class="kr">const</span> <span class="nx">WebSocket</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'ws'</span><span class="p">);</span>
+```javascript
+  const WebSocket = require('ws');
 
-  <span class="kr">const</span> <span class="nx">ws</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WebSocket</span><span class="p">(</span><span class="s1">'wss://emotivcortex.com:54321'</span><span class="p">);</span>
+  const ws = new WebSocket('wss://emotivcortex.com:54321');
 
-  <span class="nx">ws</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'open'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Websocket connected'</span><span class="p">));</span>
-  <span class="nx">ws</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'close'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Websocket disconnected'</span><span class="p">));</span>
+  ws.on('open', () => console.log('Websocket connected'));
+  ws.on('close', () => console.log('Websocket disconnected'));
 
-  <span class="nx">ws</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'message'</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'&gt;'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
-  <span class="p">});</span>
-</code></pre>
+  ws.on('message', (data) => {
+    console.log('>', data);
+  });
+```
+
+
 <blockquote class="lang-specific python">
   <p>
     Examples are currently set to: <b>Python</b>
@@ -501,26 +492,38 @@
   <p>
     Examples are currently set to: <b>Swift</b>
   </p>
-</blockquote>
+</blockquote> -->
 
-<pre class="highlight python tab-python"><code>  <span class="c"># Python example</span>
-  <span class="kn">import</span> <span class="nn">lol</span>
-  <span class="k">if</span> <span class="bp">True</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"yeah!"</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight matlab tab-matlab"><code>  <span class="c1">% Matlab example</span>
-</code></pre>
-<pre class="highlight java tab-java"><code>  <span class="cm">/* Java example */</span>
-</code></pre>
-<pre class="highlight c tab-c"><code>  <span class="c1">// C example
-</span></code></pre>
-<pre class="highlight csharp tab-csharp"><code>  <span class="c1">// C# example</span>
-</code></pre>
-<pre class="highlight swift tab-swift"><code>  <span class="c1">// Swift example</span>
-</code></pre>
-<p>The examples in this documentation are available in a variety of different languages, you can click the tabs on the bottom-right to pick one.</p>
+<!-- ```python
+  # Python example
+  import lol
+  if True:
+    print("yeah!")
+```
 
-<p>In some cases we expect that you’re using particular JSON and WebSocket libraries. Instructions on how to install and use them for your chosen language are on the right.</p>
+```matlab
+  % Matlab example
+```
+
+```java
+  /* Java example */
+```
+
+```c
+  // C example
+```
+
+```csharp
+  // C# example
+```
+
+```swift
+  // Swift example
+``` -->
+
+<!-- The examples in this documentation are available in a variety of different languages, you can click the tabs on the bottom-right to pick one.
+
+In some cases we expect that you're using particular JSON and WebSocket libraries. Instructions on how to install and use them for your chosen language are on the right. -->
 
 
 <h1 id="concepts">Concepts</h1>
@@ -925,18 +928,20 @@ Otherwise the number associated with the marker trigger (positive number), or th
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"login"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"username"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-      <span class="s2">"password"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-      <span class="s2">"client_id"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-      <span class="s2">"client_secret"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "login",
+    "params": {
+      "username": "...",
+      "password": "...",
+      "client_id": "...",
+      "client_secret": "...",
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -967,12 +972,14 @@ Otherwise the number associated with the marker trigger (positive number), or th
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"getUserLogin"</span><span class="p">,</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "getUserLogin",
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -1029,15 +1036,17 @@ Otherwise the number associated with the marker trigger (positive number), or th
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"logout"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"username"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "logout",
+    "params": {
+      "username": "...",
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -1133,13 +1142,15 @@ Otherwise the number associated with the marker trigger (positive number), or th
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"authorize"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "authorize",
+    "params": {},
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -1174,18 +1185,20 @@ Otherwise the number associated with the marker trigger (positive number), or th
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"authorize"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"client_id"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-      <span class="s2">"client_secret"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-      <span class="s2">"license"</span><span class="p">:</span> <span class="s2">"..."</span>
-      <span class="s2">"debit"</span><span class="p">:</span> <span class="mi">10</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "authorize",
+    "params": {
+      "client_id": "...",
+      "client_secret": "...",
+      "license": "..."
+      "debit": 10
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -1215,15 +1228,17 @@ Otherwise the number associated with the marker trigger (positive number), or th
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"generateNewToken"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"token"</span><span class="p">:</span> <span class="s2">"..."</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "generateNewToken",
+    "params": {
+      "token": "..."
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -1483,16 +1498,18 @@ Otherwise the number associated with the marker trigger (positive number), or th
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"controlBluetoothHeadset"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"command"</span><span class="p">:</span> <span class="s2">"connect"</span><span class="p">,</span>
-      <span class="s2">"headset"</span><span class="p">:</span> <span class="s2">"INSIGHT-DEADBEEF"</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "controlBluetoothHeadset",
+    "params": {
+      "command": "connect",
+      "headset": "INSIGHT-DEADBEEF"
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -1864,7 +1881,7 @@ Otherwise the number associated with the marker trigger (positive number), or th
 
 </div>
 
-<h3 id="example-start-a-session">Example: Start a session</h3>
+<h3 id="example-start-a-record">Example: Start a record</h3>
 
 <blockquote>
   <p>Request</p>
@@ -2206,18 +2223,20 @@ Otherwise the number associated with the marker trigger (positive number), or th
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"updateNote"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-    	<span class="s2">"_auth"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-    	<span class="s2">"session"</span><span class="p">:</span> <span class="s2">"abcd"</span><span class="p">,</span>
-    	<span class="s2">"note"</span><span class="p">:</span> <span class="s2">"new note"</span>
-    	<span class="s2">"record"</span><span class="p">:</span> <span class="s2">"1234"</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "updateNote",
+    "params": {
+    	"_auth": "...",
+    	"session": "abcd",
+    	"note": "new note"
+    	"record": "1234"
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -2805,15 +2824,17 @@ Otherwise the number associated with the marker trigger (positive number), or th
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"getDetectionInfo"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"detection"</span><span class="p">:</span> <span class="s2">"mentalCommand"</span><span class="p">,</span>
-    <span class="p">}</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "getDetectionInfo",
+    "params": {
+      "detection": "mentalCommand",
+    }
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -2955,19 +2976,21 @@ Otherwise the number associated with the marker trigger (positive number), or th
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"training"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-    	<span class="s2">"_auth"</span><span class="p">:</span> <span class="s2">"abcd"</span><span class="p">,</span>
-    	<span class="s2">"detection"</span><span class="p">:</span> <span class="s2">"mentalCommand"</span><span class="p">,</span>
-    	<span class="s2">"session"</span><span class="p">:</span> <span class="s2">"1234"</span><span class="p">,</span>
-    	<span class="s2">"action"</span><span class="p">:</span> <span class="s2">"neutral"</span><span class="p">,</span>
-    	<span class="s2">"status"</span><span class="p">:</span> <span class="s2">"start"</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "training",
+    "params": {
+    	"_auth": "abcd",
+    	"detection": "mentalCommand",
+    	"session": "1234",
+    	"action": "neutral",
+    	"status": "start"
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -3044,15 +3067,17 @@ Otherwise the number associated with the marker trigger (positive number), or th
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"queryProfile"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"_auth"</span><span class="p">:</span> <span class="s2">"abcd"</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "queryProfile",
+    "params": {
+      "_auth": "abcd"
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -3182,18 +3207,20 @@ Otherwise the number associated with the marker trigger (positive number), or th
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"setupProfile"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"_auth"</span><span class="p">:</span> <span class="s2">"abcd"</span><span class="p">,</span>
-      <span class="s2">"headset"</span><span class="p">:</span> <span class="s2">"INSIGHT-DEADBEEF"</span><span class="p">,</span>
-      <span class="s2">"profile"</span><span class="p">:</span> <span class="s2">"test"</span><span class="p">,</span>
-      <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"create"</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "setupProfile",
+    "params": {
+      "_auth": "abcd",
+      "headset": "INSIGHT-DEADBEEF",
+      "profile": "test",
+      "status": "create"
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -4446,17 +4473,6 @@ An auth token is an opaque string returned by the [`authorize`](#authorize) meth
 
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="json--raw">Raw</a>
-                <a href="#" data-language-name="shell">Shell</a>
-                <a href="#" data-language-name="javascript">Javascript</a>
-                <a href="#" data-language-name="python">Python</a>
-                <a href="#" data-language-name="matlab">Matlab</a>
-                <a href="#" data-language-name="java">Java</a>
-                <a href="#" data-language-name="c">C/C++</a>
-                <a href="#" data-language-name="csharp">C#/Unity</a>
-                <a href="#" data-language-name="swift">Swift</a>
-          </div>
       </div>
     </div>
   </body>

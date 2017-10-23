@@ -73,15 +73,17 @@
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"getDetectionInfo"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"detection"</span><span class="p">:</span> <span class="s2">"mentalCommand"</span><span class="p">,</span>
-    <span class="p">}</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "getDetectionInfo",
+    "params": {
+      "detection": "mentalCommand",
+    }
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -223,19 +225,21 @@
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"training"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-    	<span class="s2">"_auth"</span><span class="p">:</span> <span class="s2">"abcd"</span><span class="p">,</span>
-    	<span class="s2">"detection"</span><span class="p">:</span> <span class="s2">"mentalCommand"</span><span class="p">,</span>
-    	<span class="s2">"session"</span><span class="p">:</span> <span class="s2">"1234"</span><span class="p">,</span>
-    	<span class="s2">"action"</span><span class="p">:</span> <span class="s2">"neutral"</span><span class="p">,</span>
-    	<span class="s2">"status"</span><span class="p">:</span> <span class="s2">"start"</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "training",
+    "params": {
+    	"_auth": "abcd",
+    	"detection": "mentalCommand",
+    	"session": "1234",
+    	"action": "neutral",
+    	"status": "start"
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>

@@ -65,18 +65,20 @@
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"login"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"username"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-      <span class="s2">"password"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-      <span class="s2">"client_id"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-      <span class="s2">"client_secret"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "login",
+    "params": {
+      "username": "...",
+      "password": "...",
+      "client_id": "...",
+      "client_secret": "...",
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -107,12 +109,14 @@
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"getUserLogin"</span><span class="p">,</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "getUserLogin",
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -169,15 +173,17 @@
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"logout"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"username"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "logout",
+    "params": {
+      "username": "...",
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -273,13 +279,15 @@
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"authorize"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "authorize",
+    "params": {},
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -314,18 +322,20 @@
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"authorize"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"client_id"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-      <span class="s2">"client_secret"</span><span class="p">:</span> <span class="s2">"..."</span><span class="p">,</span>
-      <span class="s2">"license"</span><span class="p">:</span> <span class="s2">"..."</span>
-      <span class="s2">"debit"</span><span class="p">:</span> <span class="mi">10</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "authorize",
+    "params": {
+      "client_id": "...",
+      "client_secret": "...",
+      "license": "..."
+      "debit": 10
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
@@ -355,15 +365,17 @@
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"generateNewToken"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"token"</span><span class="p">:</span> <span class="s2">"..."</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "generateNewToken",
+    "params": {
+      "token": "..."
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>

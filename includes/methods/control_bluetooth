@@ -90,16 +90,18 @@
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight javascript tab-javascript"><code>  <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-    <span class="s2">"jsonrpc"</span><span class="p">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
-    <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"controlBluetoothHeadset"</span><span class="p">,</span>
-    <span class="s2">"params"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"command"</span><span class="p">:</span> <span class="s2">"connect"</span><span class="p">,</span>
-      <span class="s2">"headset"</span><span class="p">:</span> <span class="s2">"INSIGHT-DEADBEEF"</span>
-    <span class="p">},</span>
-    <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="p">});</span>
-</code></pre>
+<!-- ```javascript
+  ws.send({
+    "jsonrpc": "2.0",
+    "method": "controlBluetoothHeadset",
+    "params": {
+      "command": "connect",
+      "headset": "INSIGHT-DEADBEEF"
+    },
+    "id": 1
+  });
+``` -->
+
 <blockquote>
   <p>Response</p>
 </blockquote>
