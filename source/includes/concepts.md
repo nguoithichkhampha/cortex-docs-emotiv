@@ -126,7 +126,9 @@ prime     | Yes | high-resolution
 
 When a session is `closed`, no subscriptions are allowed.
 
-Can have some cases for an lifecycle of session: opened -> activated -> closed or opened -> closed or activated -> closed.
+Diagram:
+
+![session_lifecycle](../images/session_lifecycle.png)
 
 </div>
 
