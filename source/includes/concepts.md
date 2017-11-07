@@ -75,7 +75,7 @@ The exception to this is streams of data that you receive from the headset, whic
 
 <div class="fullwidth">
 
-By default, You can work with Cortex without client id/ secret. But if you want to access Raw EEG data and high-resolution performance metrics, you have to call the [`authorize` method](#authorize) with a client ID and secret. These are specific to your application and used for security and to prevent abuse. You can request a client ID and secret [on our developer page](https://www.emotiv.com/cortex-apps).
+By default, You can work with Cortex without client id/ secret. But if you want to access Raw EEG data and high-resolution performance metrics, you have to call the [`authorize` method](#authorize) with a client ID and secret. These are specific to your application and used for security and to prevent abuse. You can request a client ID and secret [on your "my account" page](https://www.emotiv.com/my-account/cortex-apps).
 
 </div>
 
