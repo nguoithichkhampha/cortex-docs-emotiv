@@ -487,3 +487,113 @@ Parameter | Type   | Description
   "result": ["pull"]
 }
 ```
+
+## `facialExpressionSignatureType`
+
+<div class="fullwidth">
+
+Get/Set signature type for Facial Expression 
+
+### Parameters
+
+#### Request
+
+Parameter | Type   | Required | Description
+--------- | ----   | ---------| -----------
+_auth     | string ([Auth Token](#auth-token)) | Yes | Auth token
+session   | string | No  | session ID. If `session` not set that mean just read info from local profile file
+profile   | string | Yes | profile name
+status    | string | Yes | Shoule be "set" or "get"
+signature | string | No  | Signature type will apply for Facial Expression. Get from the field `signature` in response of request [get detection info](#getdetectioninfo)
+
+#### Response
+
+Parameter | Type   | Description
+--------- | ----   | -----------
+(entire reponse) | string |
+
+</div>
+
+### Example: Get facial expression signature type
+
+> Request
+
+```json--raw
+{
+  "jsonrpc": "2.0",
+  "method": "facialExpressionSignatureType",
+  "params": {
+    "_auth": "abcd",
+    "status": "get",
+    "session": "1234",
+    "profile": "test"
+  },
+  "id": 1
+}
+```
+
+> Response
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "universal"
+}
+```
+
+## `facialExpressionThreshold`
+
+<div class="fullwidth">
+
+Get/Set threshold for FacialExpression
+
+### Parameters
+
+#### Request
+
+Parameter | Type   | Required | Description
+--------- | ----   | ---------| -----------
+_auth     | string ([Auth Token](#auth-token)) | Yes | Auth token
+session   | string | No  | session ID. If `session` not set that mean just read info from local profile file
+profile   | string | Yes | profile name
+status    | string | Yes | Shoule be "set" or "get"
+action    | string | Yes | Action will use. Get from the field `actions` in response of request [get detection info](#getdetectioninfo)
+value     | number | No  | threshold value will set (min: 0, max: 1000)
+
+#### Response
+
+Parameter | Type   | Description
+--------- | ----   | -----------
+(entire reponse) | string |
+
+</div>
+
+### Example: Get threshold value of action `surprise`
+
+> Request
+
+```json--raw
+{
+  "jsonrpc": "2.0",
+  "method": "facialExpressionThreshold",
+  "params": {
+    "_auth": "abcd",
+    "status": "get",
+    "session": "1234",
+    "profile": "test"
+    "action": "surprise"
+  },
+  "id": 1
+}
+```
+
+> Response
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": 50
+}
+```
