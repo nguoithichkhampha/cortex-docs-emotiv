@@ -510,7 +510,8 @@ signature | string | No  | Signature type will apply for Facial Expression. Get 
 
 Parameter | Type   | Description
 --------- | ----   | -----------
-(entire reponse) | string |
+currentSig| string | current signature is using
+availableSig | array of strings | list available signature can apply
 
 </div>
 
@@ -538,7 +539,11 @@ Parameter | Type   | Description
 {
   "jsonrpc": "2.0",
   "id": 1,
-  "result": "universal"
+  "result": {
+    "currentSig":"universal",
+    "availableSig": ["universal","trained"]
+  }
+
 }
 ```
 
