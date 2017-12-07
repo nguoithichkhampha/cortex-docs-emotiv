@@ -241,7 +241,7 @@ profile   | string | Yes| profile name
 
 Parameter | Type   | Description
 --------- | ----   | -----------
-(entire reponse) | array of strings | list actions trained
+(entire reponse) | array of json object | list actions trained
 
 </div>
 
@@ -269,7 +269,10 @@ Parameter | Type   | Description
 {
   "jsonrpc": "2.0",
   "id": 1,
-  "result": ["pull","push"]
+  "result": [
+      {"pull": 2},
+      {"push": 1}
+    ]
 }
 ```
 
