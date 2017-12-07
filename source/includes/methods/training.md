@@ -241,7 +241,7 @@ profile   | string | Yes| profile name
 
 Parameter | Type   | Description
 --------- | ----   | -----------
-(entire reponse) | array of json object | list actions trained
+(entire reponse) | array of json object | list actions trained with number of times training
 
 </div>
 
