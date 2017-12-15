@@ -241,7 +241,8 @@ profile   | string | Yes| profile name
 
 Parameter | Type   | Description
 --------- | ----   | -----------
-(entire reponse) | array of json object | list actions trained with number of times training
+action | string | action name
+times  | number | number of times training
 
 </div>
 
@@ -270,8 +271,14 @@ Parameter | Type   | Description
   "jsonrpc": "2.0",
   "id": 1,
   "result": [
-      {"pull": 2},
-      {"push": 1}
+      {
+        "action": "push",
+        "times": 2
+      },
+      {
+        "action": "pull",
+        "times": 1
+      }
     ]
 }
 ```
