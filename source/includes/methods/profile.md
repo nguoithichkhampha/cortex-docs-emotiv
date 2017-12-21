@@ -86,7 +86,7 @@ This method help you work with training profile. You can save training data to n
 Parameter | Type   | Required | Description
 --------- | ----   | ---------| -----------
 _auth     | string ([Auth Token](#auth-token))  | Yes | Auth token
-headset   | string | Yes | headset ID
+headset   | string | No | headset ID. This field is required when load or save profile
 profile   | string | Yes | profile name
 newProfileName | string | No | new profile name when you want to rename profile
 status    | string | Yes | See below
