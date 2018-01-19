@@ -13,6 +13,7 @@ Parameter | Type   | Required | Description
 _auth     | string ([Auth Token](#auth-token)) | Yes | Auth token
 folderPath| string | Yes | The folder contains data file
 outputPath| string | No  | The output folder will store decrypted files. If not set, Cortex will store same input folder.
+license   | string | No  | License ID of user. If not set, Cortex will use License ID from ([Auth Token](#auth-token)).
 
 #### Response
 
