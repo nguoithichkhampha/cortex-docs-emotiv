@@ -612,3 +612,120 @@ Parameter | Type   | Description
   "result": 50
 }
 ```
+
+## `mentalCommandTrainingThreshold`
+
+<div class="fullwidth">
+
+Get threshold of MentalCommand
+
+### Parameters
+
+#### Request
+
+Parameter | Type   | Required | Description
+--------- | ----   | ---------| -----------
+_auth     | string ([Auth Token](#auth-token)) | Yes | Auth token
+session   | string | No  | session ID. If `session` not set that mean just read info from local profile file
+profile   | string | Yes | profile name
+
+#### Response
+
+Parameter | Type   | Description
+--------- | ----   | -----------
+currentThreshold | number | 
+lastTrainingScore| number |
+
+</div>
+
+### Example: 
+
+> Request
+
+```json--raw
+{
+  "jsonrpc": "2.0",
+  "method": "mentalCommandTrainingThreshold",
+  "params": {
+    "_auth": "abcd",
+    "profile": "test"
+  },
+  "id": 1
+}
+```
+
+> Response
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "currentThreshold": 0.833333313465118
+    "lastTrainingScore": 0.0
+  }
+}
+```
+
+## `mentalCommandBrainMap`
+
+<div class="fullwidth">
+
+Get Brain Map of MentalCommand training action
+
+### Parameters
+
+#### Request
+
+Parameter | Type   | Required | Description
+--------- | ----   | ---------| -----------
+_auth     | string ([Auth Token](#auth-token)) | Yes | Auth token
+session   | string | No  | session ID. If `session` not set that mean just read info from local profile file
+profile   | string | Yes | profile name
+
+#### Response
+
+Parameter | Type   | Description
+--------- | ----   | -----------
+action | string | traning action
+coordinates| json array | first element is x coordinate, second is y coordinate
+
+</div>
+
+### Example: 
+
+> Request
+
+```json--raw
+{
+  "jsonrpc": "2.0",
+  "method": "mentalCommandBrainMap",
+  "params": {
+    "_auth": "abcd",
+    "profile": "test"
+  },
+  "id": 1
+}
+```
+
+> Response
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+  [
+    {
+      "action": "neutral",
+      "coordinates": [0,0]
+    },
+    {
+      "action": "push",
+      "coordinates": [100,200]
+    }
+  ]
+
+  }
+}
+```
