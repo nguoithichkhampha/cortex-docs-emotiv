@@ -688,7 +688,7 @@ profile   | string | Yes | profile name
 Parameter | Type   | Description
 --------- | ----   | -----------
 action | string | traning action
-coordinates| json array | first element is x coordinate, second is y coordinate
+coordinates| json array | first element is x coordinate, second is y coordinate (range of value from -1 to 1)
 
 </div>
 
@@ -722,7 +722,7 @@ coordinates| json array | first element is x coordinate, second is y coordinate
     },
     {
       "action": "push",
-      "coordinates": [100,200]
+      "coordinates": [0.5,0.5]
     }
   ]
 
