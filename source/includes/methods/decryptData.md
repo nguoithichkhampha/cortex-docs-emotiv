@@ -4,8 +4,6 @@
 
 Decrypt file data recorded by extender. After Cortex finishes decrypt file will appear a warning message  
 
-### Parameters
-
 #### Request
 
 Parameter | Type   | Required | Description
