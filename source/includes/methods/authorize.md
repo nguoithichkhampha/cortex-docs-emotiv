@@ -29,7 +29,7 @@ client_secret | string | Yes      | Client Secret
       "username": "...",
       "password": "...",
       "client_id": "...",
-      "client_secret": "...",
+      "client_secret": "..."
     },
     "id": 1
   }
@@ -122,7 +122,7 @@ username      | string | Yes      | Emotiv ID
     "jsonrpc": "2.0",
     "method": "logout",
     "params": {
-      "username": "...",
+      "username": "..."
     },
     "id": 1
   }
@@ -146,6 +146,47 @@ username      | string | Yes      | Emotiv ID
     "jsonrpc": "2.0",
     "id":1,
     "result": "...."
+  }
+```
+
+## `acceptLicense`
+
+<div class="fullwidth">
+
+You need to provide a username.
+
+### Parameters
+
+#### Request
+
+Parameter     | Type   | Required | Description
+---------     | ----   | ---------| -----------
+username      | string | Yes      | Emotiv ID
+
+</div>
+
+### Example: Emotiv user accept the license
+
+> Request
+
+```json--raw
+  {
+    "jsonrpc": "2.0",
+    "method": "acceptLicense",
+    "params": {
+      "username": "cortextest1"
+    },
+    "id": 1
+  }
+```
+
+> Response
+
+```json
+  {
+    "jsonrpc": "2.0",
+    "id":1,
+    "result": "User cortextest1 accept license successfully"
   }
 ```
 
