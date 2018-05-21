@@ -52,5 +52,6 @@ Error Code | Meaning
 -32038     | Extender ID not found                                        |
 -32039     | Cortex request time out                                      |
 -32040     | You can not active multiple sessions with same headset       |
+-32041     | User has not accepted the license                            |
    
 </div>
