@@ -149,47 +149,6 @@ username      | string | Yes      | Emotiv ID
   }
 ```
 
-## `acceptLicense`
-
-<div class="fullwidth">
-
-You need to provide a username.
-
-### Parameters
-
-#### Request
-
-Parameter     | Type   | Required | Description
----------     | ----   | ---------| -----------
-username      | string | Yes      | Emotiv ID
-
-</div>
-
-### Example: Emotiv user accept the license
-
-> Request
-
-```json--raw
-  {
-    "jsonrpc": "2.0",
-    "method": "acceptLicense",
-    "params": {
-      "username": "cortextest1"
-    },
-    "id": 1
-  }
-```
-
-> Response
-
-```json
-  {
-    "jsonrpc": "2.0",
-    "id":1,
-    "result": "User cortextest1 accept license successfully"
-  }
-```
-
 ## `authorize`
 
 <div class="fullwidth">
@@ -346,3 +305,51 @@ This will return a new token for you to use.
 
 You can genareate new token at any time. Both old token and new token can use if it doesn't expire .
 
+## `acceptLicense`
+
+<div class="fullwidth">
+
+End User has to accept our license to use Cortex. If user doesn't accept, they can not use Cortex anymore.
+
+### Parameters
+
+#### Request
+
+Parameter     | Type   | Required | Description
+---------     | ----   | ---------| -----------
+_auth         | string ([Auth Token](#auth-token)) | Yes | Auth token
+
+#### Response
+
+Parameter | Type   | Description
+--------- | ----   | -----------
+_auth     | string ([Auth Token](#auth-token))  | New Cortex token
+
+</div>
+
+### Example: Emotiv user accept the license
+
+> Request
+
+```json--raw
+  {
+    "jsonrpc": "2.0",
+    "method": "acceptLicense",
+    "params": {
+      "_auth": "abcd"
+    },
+    "id": 1
+  }
+```
+
+> Response
+
+```json
+  {
+    "jsonrpc": "2.0",
+    "id":1,
+    "result": {
+      "_auth": "..."
+    }
+  }
+```
