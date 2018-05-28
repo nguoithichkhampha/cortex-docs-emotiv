@@ -32,7 +32,7 @@ You need to call this request to connect with headset.
 
 Parameter | Type   | Required | Description
 --------- | ----   | ---------| -----------
-command   | string  | Yes | must be "connect","disconnect" or "refreshScan"
+command   | string  | Yes | must be "connect","disconnect" or "refresh"
 headset   | string  | No | headset ID
 
 #### Response
