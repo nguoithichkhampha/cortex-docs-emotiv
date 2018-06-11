@@ -22,6 +22,7 @@ includes:
   - methods.md.erb
   - datatypes
   - workflow
+  - _errors
 
 search: true
 ---
