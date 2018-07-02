@@ -383,7 +383,7 @@ seat_count      | number | the number of seat
 
 </div>
 
-### Example: Emotiv user accept the license
+### Example: Get infomation of commercial license
 
 > Request
 
