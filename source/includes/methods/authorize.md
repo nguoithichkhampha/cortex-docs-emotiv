@@ -353,3 +353,67 @@ _auth     | string ([Auth Token](#auth-token))  | New Cortex token
     }
   }
 ```
+
+## `getLicenseInfo`
+
+<div class="fullwidth">
+
+Get Info of the current license.
+
+### Parameters
+
+#### Request
+
+Parameter     | Type   | Required | Description
+---------     | ----   | ---------| -----------
+_auth         | string ([Auth Token](#auth-token)) | Yes | Auth token
+
+#### Response
+
+Parameter       | Type   | Description
+--------------- | ----   | -----------
+is_commercial   | bool   | 
+recording_count | number | the number of recording already used
+license_id      | string |
+scopes          | array of string | scope of the license
+max_record      | number or string | number of record can use or "unlimited"
+valid_from      | string | the time of license become valid
+valid_to        | string | the time of license will be expired
+seat_count      | number | the number of seat
+
+</div>
+
+### Example: Emotiv user accept the license
+
+> Request
+
+```json--raw
+  {
+    "jsonrpc": "2.0",
+    "method": "getLicenseInfo",
+    "params": {
+      "_auth": "abcd"
+    },
+    "id": 1
+  }
+```
+
+> Response
+
+```json
+  {
+    "id":1,
+    "jsonrpc":"2.0",
+    "result":
+    {
+      "is_commercial":true,
+      "license_id":"d289ccbd-8098-4e19-9827-dbe450196c56",
+      "max_record":"unlimited",
+      "recording_count":3,
+      "scopes":["eeg","commercial"],
+      "seat_count":1,
+      "valid_from":"2018-06-18T07:00:00+07:00",
+      "valid_to":"2018-07-18T07:00:00+07:00"
+    }
+  }
+```
