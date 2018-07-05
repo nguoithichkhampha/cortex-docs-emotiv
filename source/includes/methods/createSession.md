@@ -18,6 +18,8 @@ project   | string | No | Project name for session
 title     | string | No | Title name for session
 subject   | string | No | use in the future
 experimentID | number | No | specific experiment id for the application
+sensors   | array of strings | No | Set mapping channel for flex headset. The size of array should be 34 (include 2 reference channel and 32 eeg channel). 2 first elements is CMS and DRL. the last channels follow the order LA - LB and RA - RB. Set element is empty string if you don't set mapping for this channel.
+Example: don't set mapping for LA -> ["Fz","AFz","",.......]
 
 #### Response
 
@@ -180,3 +182,76 @@ In this example, we choose an existing headset to start a session on, and immedi
 ```
 
 In this example we set a custom title, project, and subject.
+
+### Example: Create session with Flex headset
+
+> Request
+
+```json--raw
+  {
+    "jsonrpc": "2.0",
+    "method": "createSession",
+    "params": {
+      "_auth": "...",
+      "headset": "EPOCFLEX-DEADBEEF",
+      "sensors":
+        [
+          "Fz",
+          "AFz",
+          "AF3",
+          "AF4",
+          .....
+        ],
+      "status": "open"
+    },
+    "id": 1
+  }
+```
+
+> Response
+
+```json
+  {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+      "appId": "",
+      "headset": 
+      {
+        "connectedBy": "dongle",
+        "dongle": "6ff",
+        "firmware": "f10",
+        "id": "EPOCFLEX-DEADBEEF",
+        "label": "",
+        "sensors":
+        [
+          "Fz",
+          "AFz",
+          "AF3",
+          "AF4",
+          .....
+        ],
+        "settings": 
+        {
+          "eegRate": 128,
+          "eegRes": 14,
+          "memsRate": 16,
+          "memsRes": 10,
+          "mode": "EPOCFLEX"
+        },
+        "status": "connected"
+      },
+      "id": "af349e3e-c72b-44c9-992c-5ee1905cfdaa",
+      "license": "",
+      "logs": null,
+      "markers": [],
+      "profile": "",
+      "started": "2017-03-23T18:25:08Z",
+      "status": "opened",
+      "stopped": "",
+      "streams": {},
+      "subject": "",
+      "tags": []
+    }
+  }
+```
