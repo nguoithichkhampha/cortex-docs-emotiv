@@ -18,8 +18,7 @@ project   | string | No | Project name for session
 title     | string | No | Title name for session
 subject   | string | No | use in the future
 experimentID | number | No | specific experiment id for the application
-sensors   | array of strings | No | Set mapping channel for flex headset. The size of array should be 34 (include 2 reference channel and 32 eeg channel). 2 first elements is CMS and DRL. the last channels follow the order LA - LB and RA - RB. Set element is empty string if you don't set mapping for this channel.
-Example: don't set mapping for LA -> ["Fz","AFz","",.......]
+sensors   | array of strings | No | Set mapping channel for flex headset. The size of array should be 34 (include 2 reference channels and 32 eeg channels). 2 first elements is CMS and DRL. the last channels follow the order LA - LQ and RA - RQ. Set element is empty string if you don't set mapping for this channel. Example: don't set mapping for LA -> ["Fz","AFz","",.......]
 
 #### Response
 
