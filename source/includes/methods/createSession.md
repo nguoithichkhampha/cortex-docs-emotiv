@@ -18,7 +18,14 @@ project   | string | No | Project name for session
 title     | string | No | Title name for session
 subject   | string | No | use in the future
 experimentID | number | No | specific experiment id for the application
-sensors   | array of strings | No | Set mapping channel for flex headset. The size of array should be 34 (include 2 reference channels and 32 eeg channels). 2 first elements is CMS and DRL. the last channels follow the order LA - LQ and RA - RQ. Set element is empty string if you don't set mapping for this channel. Example: don't set mapping for LA -> ["Fz","AFz","",.......]
+sensors   | array of strings | No | Set mapping channel for flex headset. The size of array should be 34 (include 2 reference channels and 32 eeg channels). 2 first elements is CMS and DRL. the last channels follow the order LA - LQ and RA - RQ. Set element is empty string if you don't set mapping for this channel. Example: don't set mapping for LA -> ["Fz","Afz","",.......]
+
+##### Channel name is available for Flex headset:
+
+|Cz, FCz, Fz, Afz, Fpz, Fp1, AF3, AF7, F9, F7, F5, F3, F1, FC1, C1, C3, FC3, FC5 |
+|FT7, FT9, T7, C5, TP9, TP7, CP5, CP3, CP1, P1, P3, P5, P7, P9, PO9, PO7, PO3, O1 |
+|O9, CPz, Pz, POz, Oz, Iz, O10, O2, PO4, PO8, PO10, P10, P8, P6, P4, P2, CP2, CP4 |
+|CP6, TP8, TP10, C6, T8, FT10, FT8, FC6, FC4, C4, C2, FC2, F2, F4, F6, F8, F10, AF8, AF4, Fp2 |
 
 #### Response
 
@@ -196,7 +203,7 @@ In this example we set a custom title, project, and subject.
       "sensors":
         [
           "Fz",
-          "AFz",
+          "Afz",
           "AF3",
           "AF4",
           .....
@@ -225,7 +232,7 @@ In this example we set a custom title, project, and subject.
         "sensors":
         [
           "Fz",
-          "AFz",
+          "Afz",
           "AF3",
           "AF4",
           .....
