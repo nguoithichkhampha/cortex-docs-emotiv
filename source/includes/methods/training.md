@@ -241,8 +241,8 @@ profile   | string | Yes| profile name
 
 Parameter | Type   | Description
 --------- | ----   | -----------
-action | string | action name
-times  | number | number of times training
+trained_actions | array of json object | action name and number of times training
+total_times_training  | number | total number of times training and never reset. This value is incremented each times call start training successful for any action.
 
 </div>
 
@@ -270,16 +270,21 @@ times  | number | number of times training
 {
   "jsonrpc": "2.0",
   "id": 1,
-  "result": [
-      {
-        "action": "push",
-        "times": 2
-      },
-      {
-        "action": "pull",
-        "times": 1
-      }
-    ]
+  "result": 
+  {
+    "trained_actions":
+      [
+        {
+          "action": "push",
+          "times": 2
+        },
+        {
+          "action": "pull",
+          "times": 1
+        }
+      ],
+    "total_times_training": 10  
+  }
 }
 ```
 
