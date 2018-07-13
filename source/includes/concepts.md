@@ -182,7 +182,7 @@ Stream | Description
 [fac](#fac-event) | Facial Expression Event
 [met](#met-event) | Performance Metrics data
 [dev](#dev-event) | Device data include battery level , signal strength, and signal quality all of channel headset
-[pow](#pow-evemt) | Band Power data
+[pow](#pow-event) | Band Power data
 [sys](#sys-event) | System event ( for set up training )
 
 
