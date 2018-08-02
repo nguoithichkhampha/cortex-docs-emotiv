@@ -98,6 +98,7 @@ Value    | Description
 "create"  | create new training profile
 "save"    | save current training data to profile
 "load"    | load training data from profile
+"unload"  | remove training data of one profile in Cortex
 "rename"  | rename training profile file
 "delete"  | remove training profile on the local machine
 
@@ -148,5 +149,54 @@ Parameter | Type   | Description
     "jsonrpc": "2.0",
     "id": 1,
     "result": "create profile test successfully"
+  }
+```
+
+## `getCurrentProfile`
+
+<div class="fullwidth">
+
+This method help you check have any profile linking with a specific headset
+
+### Parameters
+
+#### Request
+
+Parameter | Type   | Required | Description
+--------- | ----   | ---------| -----------
+_auth     | string ([Auth Token](#auth-token))  | Yes | Auth token
+headset   | string | Yes | headset ID.
+
+#### Response
+
+Parameter | Type   | Description
+--------- | ----   | -----------
+json | string | return null if does not have any profile.
+
+</div> 
+
+### Example
+
+> Request
+
+```json--raw
+  {
+    "jsonrpc": "2.0",
+    "method": "getCurrentProfile",
+    "params": {
+      "_auth": "abcd",
+      "headset": "INSIGHT-DEADBEEF"
+    },
+    "id": 1
+  }
+```
+
+> Response
+
+```json
+  {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": "test1"
   }
 ```
