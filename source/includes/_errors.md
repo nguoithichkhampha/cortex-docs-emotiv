@@ -53,5 +53,9 @@ Error Code | Description
 -32039     | Request timed out.                                           |
 -32040     | Multiple sessions cannot be activated on the same headset.   |
 -32041     | EULA has not been accepted by the user.                      |
+-32042     | You have accepted the license.                               |
+-32043     | Your license has been reached to max monthly record.         | 
+-32044     | Current headset has linked with a profile.                   |
+-32045     | Current headset does not link with any profile.              |
    
 </div>
