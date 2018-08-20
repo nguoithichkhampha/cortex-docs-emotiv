@@ -57,5 +57,6 @@ Error Code | Description
 -32043     | Your license has been reached to max monthly record.         | 
 -32044     | Current headset has linked with a profile.                   |
 -32045     | Current headset does not link with any profile.              |
+-32046     | Your application does not have access to the profile of another application |
    
 </div>
