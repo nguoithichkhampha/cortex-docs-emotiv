@@ -228,7 +228,7 @@ If you don't set a specific license, Cortex will use oldest license which is act
     "params": {
       "client_id": "...",
       "client_secret": "...",
-      "license": "..."
+      "license": "...",
       "debit": 10
     },
     "id": 1
