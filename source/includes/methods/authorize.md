@@ -4,14 +4,21 @@
 
 You need to provide a username and password of user from the [Emotiv Cloud](https://id.emotivcloud.com/eoidc/api-auth/login/), and the client id/secret for your application.
 
+Currently, cortex supports login by 2 methods:
+
+Login with user name / password .
+
+Login with Facebook access token.
+
 ### Parameters
 
 #### Request
 
 Parameter     | Type   | Required | Description
 ---------     | ----   | -------- | -----------
-username      | string | Yes      | Emotiv ID
-password      | string | Yes      | Emotiv Password
+username      | string | No       | Emotiv ID
+password      | string | No       | Emotiv Password
+facebookToken | string | No       | Facebook access token 
 client_id     | string | Yes      | Client ID
 client_secret | string | Yes      | Client Secret
 
